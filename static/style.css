@@ -1,0 +1,132 @@
+body {
+    padding: 0;
+    margin: 0;
+
+}
+
+table .boggle-table {
+    border-collapse: collapse;
+}
+
+
+.game-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.game-board {
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.form {
+    text-align: center;
+}
+
+.score-board {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+
+}
+
+.score-container,
+.time-container {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.score-container {
+    justify-content: flex-start;
+}
+
+.time-container {
+    justify-content: flex-end;
+}
+
+.score {
+    width: 35%;
+}
+
+.time {
+    display: flex;
+    width: 35%;
+    justify-content: flex-end;
+}
+
+.time1 {
+    margin-left: 10px;
+}
+
+.hide {
+    display: none;
+}
+
+.found {
+    color: green;
+}
+
+.not-found {
+    color: red;
+}
+
+#form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+td {
+    border: solid 1px black;
+    width: 4em;
+    height: 4em;
+    text-align: center;
+    font-size: 1.5rem;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
+}
+
+td:hover {
+    box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+}
+
+.clicked {
+    box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.5);
+    background-color: green;
+}
+
+.title {
+    color: yellow;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px;
+    font-size: 56px;
+}
+
+.title-link:hover {
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    transform: translateY(-5px);
+    transition: .3s
+}
+
+h3.title-link {
+    font-size: 32px;
+
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

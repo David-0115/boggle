@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+
+{% block title %} Play Boggle {%endblock%}
+
+{%block content%}
+<div class="game-container">
+    <h1 class="title">Boggle</h1>
+</div>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+        </div>
+        <div class="col-6">
+            <div class="score-board">
+                <div class="score-container">
+                    <div class="score">
+                        <h3>Score:</h3>
+                    </div>
+                    <div class="score1">
+                        <h3 id="score">0</h3>
+                    </div>
+                </div>
+                <div class="time-container">
+                    <div class="time">
+                        <h3>Time:</h3>
+                    </div>
+                    <div class="time1">
+                        <h3 id="time">0</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <h3 class="hide title-link" id="guesses">Guesses</h3>
+            <ul id="word-list">
+
+            </ul>
+        </div>
+        <div class="col-6" id="game">
+            <div class="game-container">
+                <div class="game-board">
+                    <table class="boggle-table hide" id="game-table">
+                        <tr>
+                            {%for char in board[0]%}
+                            <td class="boggle-cell">{{char}}</td>
+                            {%endfor%}
+                        </tr>
+                        <tr>
+                            {%for char in board[1]%}
+                            <td class="boggle-cell">{{char}}</td>
+                            {%endfor%}
+                        </tr>
+                        <tr>
+                            {%for char in board[2]%}
+                            <td class="boggle-cell">{{char}}</td>
+                            {%endfor%}
+                        </tr>
+                        <tr>
+                            {%for char in board[3]%}
+                            <td class="boggle-cell">{{char}}</td>
+                            {%endfor%}
+                        </tr>
+                        <tr>
+                            {%for char in board[4]%}
+                            <td class="boggle-cell">{{char}}</td>
+                            {%endfor%}
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="game-container" id="form-container">
+                <div class="form hide" id="form">
+                    <h3 id="form-head" class="title-link">Submit a word</h3>
+                    <form>
+                        <label for="word" id="form-label">Guess:</label>
+                        <input type="text" name="word" placeholder="Enter a word" id="word">
+                        <br>
+                        <br>
+                        <button type="submit" id="word-submit">Submit</button>
+                    </form>
+                </div>
+                <br>
+                <div id="msg"></div>
+                <br>
+                <div><button id="restart" class="hide">Restart</button></div>
+                <div class="user-info hide" id="user-info">
+                    <div class="info">High Score: <div id="high-score">0</div>
+                    </div>
+
+                    <div class="info">Plays:<div id="plays">0</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6 text-center">
+            <button id="start">Start Game</button>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>
+
+
+{%endblock%}
